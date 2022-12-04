@@ -105,7 +105,7 @@ tls:
 filters:
 - enabled: true
   url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
-  name: AdGuard Simplified Domain Names filter
+  name: DNS
   id: 1
 - enabled: true
   url: https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-easylist.txt
