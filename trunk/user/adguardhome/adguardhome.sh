@@ -79,7 +79,7 @@ dns:
   ratelimit_whitelist: []
   refuse_any: true
   bootstrap_dns:
-  - 1.1.1.1
+  - 114.114.114.114
   all_servers: true
   allowed_clients: []
   disallowed_clients: []
@@ -90,7 +90,10 @@ dns:
   safebrowsing_enabled: false
   resolveraddress: ""
   upstream_dns:
-  - 1.1.1.1
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+  - https://doh.360.cn/dns-query
+
 tls:
   enabled: false
   server_name: ""
@@ -105,16 +108,16 @@ filters:
   name: AdGuard Simplified Domain Names filter
   id: 1
 - enabled: true
-  url: https://adaway.org/hosts.txt
-  name: AdAway
+  url: https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-easylist.txt
+  name: anti
   id: 2
 - enabled: true
-  url: https://hosts-file.net/ad_servers.txt
-  name: hpHosts - Ad and Tracking servers only
+  url: https://cdn.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/rule.txt
+  name: CF
   id: 3
 - enabled: true
-  url: https://www.malwaredomainlist.com/hostslist/hosts.txt
-  name: MalwareDomainList.com Hosts List
+  url: https://cdn.jsdelivr.net/gh/xinggsf/Adblock-Plus-Rule@master/mv.txt
+  name: MV
   id: 4
 user_rules: []
 dhcp:
