@@ -31,7 +31,8 @@ build_xray:
 	sed -i \
 			'$(xray_SED_ARGS)' \
 			distro/all/all.go ; \
-	GOOS=linux GOARCH=mipsle go build -ldflags "-s -w -buildid=" -o $(THISDIR)/bin/xray; \
+	GOOS=linux GOARCH=mipsle go build -ldflags "-s -w -buildid=" -o $(THISDIR)/bin/xray \
+	&& upx --best --lzma $(THISDIR)/bin/xray ; \
 	)
 	
 clean:
